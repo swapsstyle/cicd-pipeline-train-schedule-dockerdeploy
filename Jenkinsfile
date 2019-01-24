@@ -13,7 +13,7 @@ pipeline {
                 script {
                     app = docker.build("swapsstyle/train-schedule")
                     app.inside {
-                        sh 'echo $(curl http://localhost:8080)'
+                        sh 'echo $(curl localhost:8080)'
                     }
                 }
             }
